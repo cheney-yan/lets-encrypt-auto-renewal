@@ -1,0 +1,16 @@
+draft: false
+acme:
+  email_account: cheney.yan@gmail.com
+  staging: false
+profiles:
+- name: cloudflare_profile
+  provider: cloudflare
+  provider_options:
+    auth_username: cheney.yan@gmail.com
+    auth_token: "${AUTH_TOKEN}" #1d...
+    zone_id: "${ZONE_ID}" #a4...
+
+certificates:
+- domains:
+  - "*.cloudhowto.tech"
+  profile: cloudflare_profile
